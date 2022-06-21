@@ -49,6 +49,7 @@ def main():
         log_interval=args.log_interval,
         save_interval=args.save_interval,
         resume_checkpoint=args.resume_checkpoint,
+        load_checkpoint=args.load_checkpoint,
         use_fp16=args.use_fp16,
         fp16_scale_growth=args.fp16_scale_growth,
         schedule_sampler=schedule_sampler,
@@ -70,6 +71,7 @@ def create_argparser():
         log_interval=10,
         save_interval=10000,
         resume_checkpoint="",
+        load_checkpoint="",
         use_fp16=False,
         fp16_scale_growth=1e-3,
     )
