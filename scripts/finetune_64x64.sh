@@ -3,4 +3,4 @@ DIFFUSION_FLAGS="--diffusion_steps 1000 --noise_schedule cosine"
 TRAIN_FLAGS="--lr 1e-4 --batch_size 1"
 DATAPATH=$1
 CKPT=$2
-python scripts/image_train.py --data_dir $DATAPATH --load_checkpoint $CKPT $MODEL_FLAGS $DIFFUSION_FLAGS $TRAIN_FLAGS
+torchrun scripts/image_train.py --data_dir $DATAPATH --load_checkpoint $CKPT $MODEL_FLAGS $DIFFUSION_FLAGS $TRAIN_FLAGS
